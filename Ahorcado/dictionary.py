@@ -9,7 +9,7 @@ stage = \
 ~~~~~~~~~~   
 '''
 
-symbols = '>--|x:p'
+symbols = '>--|d:D'
 
 
 
