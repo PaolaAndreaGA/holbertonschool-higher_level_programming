@@ -1,32 +1,20 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string):
-    if not isinstance(roman_string, str) or not roman_string:
-        return 0
-    romans = {
+def roman_to_int(rom_str):
+    if rom_str and type(rom_str) is str:
+        ro_num = {
             'I': 1,
             'V': 5,
             'X': 10,
             'L': 50,
             'C': 100,
             'D': 500,
-            'M': 1000,
-            'IV': 4,
-            'IX': 9,
-            'XL': 40,
-            'XC': 90,
-            'CD': 400,
-            'CM': 900
+            'M': 1000
         }
-    if roman_string and type(roman_string) == str:
-        num = 0
-        for i in range(len(roman_string)):
-            for j in romans.keys():
-                if roman_string[:] is j:
-                    num = romans[j]
-                    return num
-                if roman_string[i:i+1] is j:
-                    num += romans[j]
-                    break
-        return num
-    else:
-        return 0
+        sum = 0
+        for i in range(len(rom_str)):
+            if i > 0 and ro_num[rom_str[i]] > ro_num[rom_str[i - 1]]:
+                sum += ro_num[rom_str[i]] - 2 * ro_num[rom_str[i - 1]]
+            else:
+                sum += ro_num[rom_str[i]]
+        return sum
+    return (0)
