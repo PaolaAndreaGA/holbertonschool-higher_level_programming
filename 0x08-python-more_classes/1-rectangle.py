@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a class Rectangle that defines a rectangle by: (based on 0-rectangle)"""
+"""Write a class Rectangle that defines
+ a rectangle by: (based on 0-rectangle)"""
 
 
 class Rectangle:
@@ -21,7 +22,7 @@ class Rectangle:
     def width(self, value):
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        if value<0:
             raise TypeError("width must be >= 0")
         self.__width = value
 
@@ -29,6 +30,6 @@ class Rectangle:
     def heigth(self, value):
         if type(value) is not int:
             raise TypeError("heigth must be an integer")
-        if value < 0:
+        if value<0:
             raise TypeError("heigth must be >= 0")
         self.__height = value
