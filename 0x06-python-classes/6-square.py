@@ -26,6 +26,11 @@ class Square:
 
         self.__size = value
 
+    @property
+    def position(self):
+        """getter method"""
+        return (self.__position)
+
     @position.setter
     def position(self, value):
         """Sets the position value  """
@@ -46,17 +51,12 @@ class Square:
 
     def my_print(self):
         """prints in stdout the square with the character #"""
-        if self.__size is 0:
+        if self.size == 0:
             print()
-            return
-        if self.__position[1] > 0:
-            for i in range(self.__position[1]):
+        else:
+            a, b = self.position
+            for line in range(b):
                 print()
-
-        for i in range(self.__size):
-            if self.__position[0] > 0:
-                for i in range(self.__position[0]):
-                    print(" ", end='')
-            for j in range(self.__size):
-                print("#", end='')
-            print("")
+            for line in range(self.size):
+                print(' ' * a, end='')
+                print('#' * self.size)
