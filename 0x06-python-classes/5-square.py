@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square class based 3-square"""
+"""Square class based 4-quare"""
 
 
 class Square:
@@ -35,8 +35,7 @@ class Square:
         """prints in stdout the square with the character #"""
         if self.__size > 0:
             for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#")
-                print("")
+                    print("#" * self.__size)
+            print("")
         if self.__size == 0:
             print("")
