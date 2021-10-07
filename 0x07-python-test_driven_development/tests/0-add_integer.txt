@@ -13,7 +13,7 @@ import
 
    test 2
    >>> print(add_integer(8, 30))
-   10000
+   38
 
    test 3
    >>> print(add_integer(8.56, 30))
@@ -35,9 +35,7 @@ import
 
    test 7
    >>> print(add_integer(nan, 2))
-      Traceback (most recent call last):
-      		...
-      TypeError: a must be an integer
+   0
 
    test 8
    >>> add_integer(None)
