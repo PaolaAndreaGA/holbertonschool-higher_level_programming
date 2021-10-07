@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Unittest for max_integer(list=[])
+"""Unittest for max_integer(list=[..])
 """
 import unittest
 
