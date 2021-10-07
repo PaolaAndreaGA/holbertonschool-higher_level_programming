@@ -1,0 +1,50 @@
+======================
+
+import
+
+======================
+
+   >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+======================
+ test 1
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+ test 2
+
+ >>> text_indentation("hi! how are you? amazing. c:")
+ hi! how are you?
+ <BLANKLINE>
+ amazing.
+ <BLANKLINE>
+ c:
+ <BLANKLINE>
+
+test 3
+ >>> text_indentation(85)
+ Traceback (most recent call last):
+ ...
+ TypeError: text must be a string
+
+test 4
+ >>> text_indentation(None)
+ Traceback (most recent call last):
+ ...
+ TypeError: text must be a string
+
+test 5
+ >>> text_indentation()
+ Traceback (most recent call last):
+ ...
+ TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+test 6
+ >>> text_indentation(".")
+ .
+ <BLANKLINE>
