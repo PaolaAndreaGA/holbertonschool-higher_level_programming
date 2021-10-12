@@ -27,6 +27,8 @@ class Rectangle(BaseGeometry):
     """class Rectangle
     """
     def __init__(self, width, height):
+        """Initializes the subclass
+        """
         self.integer_validator("width",width)
         self.__width = width
 
