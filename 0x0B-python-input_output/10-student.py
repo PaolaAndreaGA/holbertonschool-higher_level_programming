@@ -20,8 +20,14 @@ class Student():
         """
         return vars(self)
 
-        if not attrs:
-            return self.__dict__
-
-        return ({key: value for key, value in self.__dict__.items()
-                if key in attrs})
+        def to_json(self, attrs=None):
+            """that retrieves a dictionary
+        representation of a Student instance
+        """
+            if attrs is None:
+                return self.__dict__
+                my_dict = {}
+            for attr in attrs:
+                if attr in self.__dict__.keys():
+                    my_dict[attr] = self.__dict__[attr]
+            return my_dict
