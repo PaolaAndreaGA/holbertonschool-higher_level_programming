@@ -21,7 +21,7 @@ class Student():
         return vars(self)
 
         if not attrs:
-            return vars(self)
+            return self.__dict__
 
         return ({key: value for key, value in self.__dict__.items()
                 if key in attrs})
