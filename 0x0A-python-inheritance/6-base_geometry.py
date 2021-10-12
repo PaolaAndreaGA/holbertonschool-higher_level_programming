@@ -4,7 +4,7 @@
 
 
 class BaseGeometry:
-    """class BaseGeometry
+    """Class that defines a shape
     """
 
     pass
@@ -13,4 +13,4 @@ class BaseGeometry:
         """Calculates Area
         """
 
-    raise Exception("area() is not implemented")
+        raise Exception("area() is not implemented")
