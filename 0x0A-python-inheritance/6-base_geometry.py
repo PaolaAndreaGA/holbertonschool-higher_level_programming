@@ -5,6 +5,8 @@
 class BaseGeometry:
     """class BaseGeometry"""
 
+    pass
+
     def area(self):
         """Calculates Area
         """
