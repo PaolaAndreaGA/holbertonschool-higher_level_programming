@@ -8,6 +8,6 @@ def append_write(filename="", text=""):
     at the end of a text file
     Return: he number of characters added
     """
-    with open(filename, mode='a', encoding="utf-8") as  f:
+    with open(filename, mode='a', encoding="utf-8") as f:
         str_count = f.write(text)
     return str_count
