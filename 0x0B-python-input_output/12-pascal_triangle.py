@@ -8,11 +8,11 @@ def pascal_triangle(n):
     list of lists of integers representing
     the Pascal’s triangle of n:
     """
-    triangle_list =[]
+    triangle_list = []
     if n <= 0:
         return triangle_list
     for i in range(n):
         item = 11**i
-        l = [int(n) for n in str(item)]
-        triangle_list.append(l)
+        lim = [int(n) for n in str(item)]
+        triangle_list.append(lim)
     return triangle_list
