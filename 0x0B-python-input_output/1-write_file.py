@@ -9,4 +9,4 @@ def write_file(filename="", text=""):
     """
     with open(filename, encoding="utf-8") as f:
         readata = f.write(text)
-        return(readata)
+    return(readata)
