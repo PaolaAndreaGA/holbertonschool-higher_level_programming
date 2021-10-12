@@ -10,5 +10,5 @@ def load_from_json_file(filename):
     """
     with open(filename, encoding='utf-8') as f:
         for line in f:
-            new = json.load(line)
+            new = json.loads(line)
     return new
