@@ -2,16 +2,15 @@
 """script that adds all args to a Python list"""
 
 
-from sys import argv
+import sys
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = \
+        __import__('6-load_from_json_file').load_from_json_file
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-
-try:
-    newObj= load_from_json_file("add_item.json")
-except:
-    newObj = []
-
-for args in (argv[1:]):
-    newObj.append(args)
-    save_to_json_file(newObj, "add_item.json")
+    try:
+        objNew = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        objNew = []
+    objNew.extend(sys.argv[1:])
+    save_to_json_file(objNew, "add_item.json")
