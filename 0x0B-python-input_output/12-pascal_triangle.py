@@ -4,15 +4,15 @@
 
 
 def pascal_triangle(n):
-    """function  that returns a
-    list of lists of integers representing
-    the Pascal’s triangle of n:
-    """
-    triangle_list = []
+    """ Prints pascal triangle """
     if n <= 0:
-        return triangle_list
+        return []
+    triangle = []
+    row = []
     for i in range(n):
-        item = 11**i
-        lim = [int(n) for n in str(item)]
-        triangle_list.append(lim)
-    return triangle_list
+        row = [1]
+        if i > 0:
+            for j in range(i):
+                row.append(sum(triangle[-1][j:j+2]))
+        triangle.append(row)
+    return triangle
