@@ -1,37 +1,32 @@
 #!/usr/bin/python3
-"""Module create class student
-"""
+"""class Student"""
 
 
-class Student():
-    """ Student class
-    """
+class Student:
+    """class Student"""
 
     def __init__(self, first_name, last_name, age):
-        """initalitation method
-        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """that retrieves a dictionary
-        representation of a Student instance
-        """
-        return vars(self)
-
-        if not attrs:
-            return vars(self)
-
-        return ({key: value for key, value in self.__dict__.items()
-                if key in attrs})
+        """Public method Retrieves a dictionary
+        representation of a Student instance"""
+        my_dict = {}
+        if attrs is None:
+            return self.__dict__
+        for attr in attrs:
+            if attr in self.__dict__.keys():
+                my_dict[attr] = self.__dict__[attr]
+        return my_dict
 
     def reload_from_json(self, json):
-        """that replaces all attributes
-        of the Student instance
-        """
-        old_dict = vars(self)
+        """Public method that replaces all
+        attributes of the Student instance"""
+        my_old_dict = self.__dict__
         for attr in json.keys():
-            for old_attr in old_dict.keys():
-                old_dict[old_attr] = json[attr]
-        return old_dict
+            for my_old_attr in my_old_dict.keys():
+                if attr == my_old_attr:
+                    my_old_dict[my_old_attr] = json[attr]
+            return my_old_dict
