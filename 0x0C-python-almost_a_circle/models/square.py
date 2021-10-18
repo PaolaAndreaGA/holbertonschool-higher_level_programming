@@ -2,12 +2,11 @@
 """
 Square Module
 """
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Sqare Class
-    """
+    """Sqare Class"""
 
     def __init__(self, size, x=0, y=0, id=None):
         """initialize method
