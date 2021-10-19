@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""
-Class Module
-"""
+"""Class Module"""
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
