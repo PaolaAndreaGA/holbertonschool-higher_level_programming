@@ -4,7 +4,6 @@ Class Module
 """
 
 
-
 from base import Base
 
 
