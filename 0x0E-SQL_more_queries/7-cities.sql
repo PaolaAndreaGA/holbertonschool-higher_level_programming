@@ -11,6 +11,6 @@ CREATE TABLE IF NOT EXISTS cities(
        id INT NOT NULL UNIQUE AUTO_INCREMENT,
        name VARCHAR(256) NOT NULL,
        PRIMARY KEY (id),
-       state_id INT,
+       state_id INT NOT NULL,
        FOREIGN KEY (state_id) REFERENCES state(state_id)
 );
