@@ -2,8 +2,8 @@
 const SquareB = require('./5-square');
 
 class Square extends SquareB {
-  charPrint (character = 'X') {
-    super.print(character);
+  charPrint (c = 'X') {
+    super.print(c);
   }
 }
 module.exports = Square;
