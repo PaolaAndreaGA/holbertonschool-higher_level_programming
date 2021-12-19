@@ -21,8 +21,8 @@ if __name__ == "__main__":
     for j in query:
         if first != 0:
             print(", ", end="")
-            print("%s" % i, end="")
-            first += 1
-            print("")
+        print("%s" % j, end="")
+        first += 1
+    print("")
     cur.close()
     db.close()
