@@ -8,10 +8,10 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=argv[1],
                          passwd=argv[2],
                          db=argv[3])
-    cr = db.cursor()
-    cr.execute("SELECT * from states ORDER BY states.id")
-    states = cr.fetchall()
-    for state in states:
-        print(state)
-    cr.close()
+    cur = db.cursor()
+    cur.execute("SELECT * from states ORDER BY states.id")
+    query = cur.fetchall()
+    for query in states:
+        print(query)
+    cur.close()
     db.close()
