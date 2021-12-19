@@ -24,6 +24,7 @@ def Get_States(username, password, db_name):
         print(row)
     cur.close()
     db.close()
+
     if __name__ == "__main__":
         """ take args and pass to states from db"""
         Get_States(argv[1], argv[2], argv[3])
