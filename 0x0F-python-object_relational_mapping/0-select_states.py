@@ -1,24 +1,17 @@
 #!/usr/bin/python3
 '''module 0 '''
 
+import sys
+import MySQLdb
 
-def getStates(userName, passWord, dbName):
-    """ Accesses database hbtn_0e_0_usa and grabs states, then puts in
-    ascending order.
-    ARGS:
-        userName: the username
-        passWord: the password
-        dbName: the name of the database to access
-    """
 
-    import MySQLdb
-
+if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=userName,
-        passwd=passWord,
-        db=dbName,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
         charset="utf8"
     )
 
@@ -30,10 +23,3 @@ def getStates(userName, passWord, dbName):
         print(row)
     cur.close()
     db.close()
-
-
-if __name__ == "__main__":
-    """ Take in arguments and passes to get states from db """
-    from sys import argv
-
-    getStates(argv[1], argv[2], argv[3])
