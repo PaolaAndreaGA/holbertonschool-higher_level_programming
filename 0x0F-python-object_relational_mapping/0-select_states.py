@@ -5,8 +5,6 @@
 def getStates(userName, passWord, dbName):
     """lists all states from the database """
 
-    def getStates(username, password, dbName):
-
         import MySQLdb
         db = MySQLdb.connect(
              host="localhost",
@@ -18,7 +16,7 @@ def getStates(userName, passWord, dbName):
         )
 
         cur = db.cursor()
-        cur.execute("SELECT * FROM states ORDER BY id ASC")
+        cur.execute("SELECT * FROM states ORDER BY id ASC;")
         query_rows = cur.fetchall()
 
         for row in query_rows:
