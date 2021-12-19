@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module0"""
 
+import Py
 import MySQLdb
 from sys import argv
 
@@ -14,12 +15,12 @@ if __name__ == "__main__":
         db=argv[3]
     )
 
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
-    query = cursor.fetchall()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    query = cur.fetchall()
 
     for i in query:
         print(i)
 
-    cursor.close()
+    cur.close()
     consult.close()
