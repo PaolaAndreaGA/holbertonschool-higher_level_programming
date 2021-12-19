@@ -12,11 +12,12 @@ if __name__ == "__main__":
                          db=argv[3])
     cur = db.cursor()
     cur.execute("SELECT * from states\
-                 WHERE name LIKE 'N%'\
-                 ORDER BY states.id")
+                WHERE name LIKE 'N%'\
+                ORDER BY states.id")
     query = cur.fetchall()
     for i in query:
-        if query[1][0] == 'N':
+        if i[1][0] == 'N':
             print(i)
     cur.close()
     db.close()
+                                                                
