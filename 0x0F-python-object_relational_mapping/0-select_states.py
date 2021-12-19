@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 '''module 0 '''
-import MySQLdb
-from sys import argv
 
 
 def Get_States(username, password, db_name):
     '''lists all states from the database hbtn_0e_0_usa'''
 
+    import MySQLdb
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -25,6 +24,9 @@ def Get_States(username, password, db_name):
     cur.close()
     db.close()
 
-    if __name__ == "__main__":
-        """ take args and pass to states from db"""
-        Get_States(argv[1], argv[2], argv[3])
+
+if __name__ == "__main__":
+    """ take args and pass to states from db"""
+    from sys import argv
+
+    Get_States(argv[1], argv[2], argv[3])
