@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * from states ORDER BY states.id")
     query = cur.fetchall()
-    for query in states:
-        print(query)
+    for i in query:
+        print(i)
     cur.close()
     db.close()
