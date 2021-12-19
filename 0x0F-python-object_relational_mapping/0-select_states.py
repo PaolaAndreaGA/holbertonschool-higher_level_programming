@@ -31,6 +31,7 @@ def getStates(userName, passWord, dbName):
     cur.close()
     db.close()
 
+
 if __name__ == "__main__":
     """ Take in arguments and passes to get states from db """
     from sys import argv
