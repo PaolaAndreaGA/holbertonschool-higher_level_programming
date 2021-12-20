@@ -14,7 +14,7 @@ if __name__ == "__main__":
                            .format(argv[1], argv[2], argv[3]))
     InstanceSession = sessionmaker(bind=engine)
     session = InstanceSession()
-    
+
     for state, city in session.query(State, City).join(
             City).order_by(City.id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
