@@ -14,7 +14,7 @@ if __name__ == "__main__":
                            .format(argv[1], argv[2], argv[3]))
     InstanceSession = sessionmaker(bind=engine)
     session = InstanceSession()
-    
+
     state = session.query(State).filter(
         State.name == argv[4]).first()
     if state:
