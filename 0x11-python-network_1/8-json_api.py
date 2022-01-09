@@ -10,7 +10,7 @@ if __name__ == '__main__':
     from sys import argv
     url = 'http://0.0.0.0:5000/search_user'
     q = ""
-    if len(argv) >= 2:
+    if len(argv) == 2:
         q = argv[1]
     data = {'q': q}
 
