@@ -15,11 +15,12 @@ if __name__ == '__main__':
     data = {'q': q}
 
     try:
-        req: requests.post(url, data)
-        json = req.json()
-        if json:
-            print("[{}] {}".format(json.get('id'), json.get('name')))
-        else:
+        r_dict = res.json()
+        id = r_dict.get('id')
+        name = r_dict.get('name')
+        if len(r_dict) == 0 or not id or not name:
             print("No result")
+        else:
+            print("[{}] {}".format(r_dict.get('id'), r_dict.get('name')))
     except Exception:
-        print("Not a valid JSON")
+            print("Not a valid JSON")
