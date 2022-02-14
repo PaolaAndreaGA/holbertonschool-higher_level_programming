@@ -1,2 +1,2 @@
 
-const changeColor = document.querySelector('header').style.backgroundColor = '#FF0000';
+const changeColor = document.querySelector('header').style.color = '#FF0000';
